@@ -74,9 +74,10 @@ ${a.join(`
     "planStartDate": "2026-05-04",
     "planEndDate": "2026-10-04",
     "createdAt": "2026-04-30T00:00:00Z",
-    "updatedAt": "2026-04-30T12:00:00Z",
+    "updatedAt": "2026-04-30T14:00:00Z",
     "totalWeeks": 22,
-    "generatedBy": "Claude Coach"
+    "generatedBy": "Claude Coach",
+    "scheduleNote": "Mon/Wed/Thu/Sat run schedule (Mon=Speed, Wed=Easy, Thu=Tempo, Sat=Long)"
   },
   "preferences": {
     "swim": "yards",
@@ -390,6 +391,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w1-mon-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run + Strides",
+              "description": "Easy Run + Strides",
+              "durationMinutes": 35,
+              "distanceMiles": 3.5,
+              "primaryZone": "Z2",
+              "humanReadable": "30min easy @ 9:45-10:30/mi (Z2)\n+ 4 x 20s strides on flat road, full walk recovery\nStrides = relaxed, fast turnover - NOT all-out sprints",
+              "completed": false
+            },
+            {
               "id": "w1-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -407,15 +420,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w1-tue",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Easy aerobic run with short strides at the end",
-              "durationMinutes": 35,
-              "distanceMiles": 3.5,
-              "primaryZone": "Z2 (142-156 bpm)",
-              "humanReadable": "30min easy @ 9:45-10:30/mi (Z2)\n+ 4 x 20s strides on flat road, full recovery walk between\nStrides = relaxed, fast turnover - NOT all-out sprints",
+              "id": "w1-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -429,7 +439,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Pure aerobic run",
+              "description": "Easy Run",
               "durationMinutes": 35,
               "distanceMiles": 3.5,
               "primaryZone": "Z2",
@@ -454,15 +464,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w1-thu",
+              "id": "w1-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Easy aerobic run",
+              "description": "Easy Run",
               "durationMinutes": 35,
               "distanceMiles": 3.5,
               "primaryZone": "Z2",
-              "humanReadable": "30-35min easy @ 9:45-10:30/mi",
+              "humanReadable": "30-35min easy @ 9:45-10:30/mi - pure aerobic",
               "completed": false
             },
             {
@@ -498,11 +508,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w1-sat",
+              "id": "w1-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 6 miles",
-              "description": "First long run back - keep it very controlled",
+              "description": "Long Run - 6 miles",
               "durationMinutes": 60,
               "distanceMiles": 6,
               "primaryZone": "Z2",
@@ -544,13 +554,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 2.5,
+            "hours": 2.8,
             "miles": 16.5
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in foundation phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -573,6 +582,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w2-mon-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run + Strides",
+              "description": "Easy Run + Strides",
+              "durationMinutes": 40,
+              "distanceMiles": 4,
+              "primaryZone": "Z2",
+              "humanReadable": "35min easy @ 9:45-10:30/mi\n+ 5 x 20s strides on flat road, walk recovery",
+              "completed": false
+            },
+            {
               "id": "w2-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -590,15 +611,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w2-tue",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Easy + 5 strides",
-              "durationMinutes": 40,
-              "distanceMiles": 4,
-              "primaryZone": "Z2",
-              "humanReadable": "35min easy @ 9:45-10:30/mi\n+ 5 x 20s strides on flat road, walk recovery",
+              "id": "w2-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -612,7 +630,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Aerobic run",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
@@ -637,15 +655,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w2-thu",
+              "id": "w2-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Easy aerobic",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
-              "humanReadable": "35-40min easy",
+              "humanReadable": "35-40min easy - conversational",
               "completed": false
             },
             {
@@ -681,11 +699,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w2-sat",
+              "id": "w2-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 7 miles",
-              "description": "Long run, easy effort",
+              "description": "Long Run - 7 miles",
               "durationMinutes": 70,
               "distanceMiles": 7,
               "primaryZone": "Z2",
@@ -732,8 +750,7 @@ ${a.join(`
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in foundation phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -756,6 +773,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w3-mon-run",
+              "sport": "run",
+              "type": "test",
+              "name": "30-min Threshold Field Test",
+              "description": "30-min Threshold Field Test",
+              "durationMinutes": 60,
+              "distanceMiles": 6,
+              "primaryZone": "Z4-5a",
+              "humanReadable": "FIELD TEST - calibrate your zones\n\nWARM UP: 15min easy + 4x20s strides\nMAIN: Run 30min ALL-OUT sustainable pace (race effort - imagine you'd be racing for 60min)\n  - Find a flat, uninterrupted route\n  - Record AVG HR for the full 30min = your LTHR\n  - Avg pace \u2248 threshold pace\nCOOL DOWN: 10min easy\n\nReport back the result and I can update zones if they're off from estimates (175 LTHR, 8:00/mi).",
+              "completed": false
+            },
+            {
               "id": "w3-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -773,15 +802,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w3-tue",
-              "sport": "run",
-              "type": "test",
-              "name": "30-min Threshold Field Test",
-              "description": "Determine your true LTHR for accurate zones",
-              "durationMinutes": 60,
-              "distanceMiles": 6,
-              "primaryZone": "Z4-5a",
-              "humanReadable": "WARM UP: 15min easy + 4x20s strides\nMAIN: Run 30min ALL-OUT sustainable pace (race effort - imagine you'd be racing for 60min)\n  - Find a flat, uninterrupted route\n  - Record AVG HR for the full 30min = your LTHR\n  - Avg pace \u2248 threshold pace\nCOOL DOWN: 10min easy\n\nReport back the result and I can update zones if they're off from estimates (175 LTHR, 8:00/mi).",
+              "id": "w3-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -795,11 +821,11 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Recovery Run",
-              "description": "Recovery from yesterday's test",
+              "description": "Easy Recovery Run",
               "durationMinutes": 35,
               "distanceMiles": 3.5,
               "primaryZone": "Z1-2",
-              "humanReadable": "35min very easy @ 10:00-10:30/mi - HR < 145",
+              "humanReadable": "35min very easy @ 10:00-10:30/mi - HR < 145\nRecovery from Mon test",
               "completed": false
             },
             {
@@ -820,11 +846,11 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w3-thu",
+              "id": "w3-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Aerobic run",
+              "description": "Easy Run",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
@@ -864,11 +890,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w3-sat",
+              "id": "w3-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 8 miles",
-              "description": "Steady long run",
+              "description": "Long Run - 8 miles",
               "durationMinutes": 80,
               "distanceMiles": 8,
               "primaryZone": "Z2",
@@ -911,12 +937,11 @@ ${a.join(`
           "run": {
             "sessions": 4,
             "hours": 3.7,
-            "miles": 22
+            "miles": 22.0
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in foundation phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -939,6 +964,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w4-mon-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run + Strides",
+              "description": "Easy Run + Strides",
+              "durationMinutes": 35,
+              "distanceMiles": 3.5,
+              "primaryZone": "Z2",
+              "humanReadable": "30min easy + 4x20s strides - cutback week, keep it relaxed",
+              "completed": false
+            },
+            {
               "id": "w4-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -956,15 +993,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w4-tue",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Light shake-out",
-              "durationMinutes": 35,
-              "distanceMiles": 3.5,
-              "primaryZone": "Z2",
-              "humanReadable": "30min easy + 4x20s strides",
+              "id": "w4-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -978,7 +1012,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Easy aerobic",
+              "description": "Easy Run",
               "durationMinutes": 35,
               "distanceMiles": 3.5,
               "primaryZone": "Z2",
@@ -1003,11 +1037,12 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w4-thu",
+              "id": "w4-thu-rest",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest",
-              "description": "Mid-week rest for recovery",
+              "name": "Rest Day",
+              "description": "Full rest - cutback week",
+              "humanReadable": "Full rest - cutback week",
               "completed": false
             },
             {
@@ -1043,11 +1078,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w4-sat",
+              "id": "w4-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 6 miles (cutback)",
-              "description": "Cutback long run",
+              "description": "Long Run - 6 miles (cutback)",
               "durationMinutes": 60,
               "distanceMiles": 6,
               "primaryZone": "Z2",
@@ -1089,13 +1124,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 3,
-            "hours": 2.5,
-            "miles": 13
+            "hours": 2.2,
+            "miles": 13.0
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in light phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -1118,6 +1152,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w5-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 3 x 1mi @ Threshold",
+              "description": "SPEED: 3 x 1mi @ Threshold",
+              "durationMinutes": 50,
+              "distanceMiles": 5.5,
+              "primaryZone": "Z5a / 8:00-8:15/mi",
+              "humanReadable": "FIRST QUALITY SESSION - threshold work\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3 x 1mi @ 8:00-8:15/mi (threshold pace, HR ~175)\n  - 2:00 jog recovery between\nCOOL DOWN: 1mi easy\n\nFeel: \"comfortably hard\" - you could speak only a few words",
+              "completed": false
+            },
+            {
               "id": "w5-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -1135,15 +1181,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w5-tue",
-              "sport": "run",
-              "type": "intervals",
-              "name": "Cruise Intervals - 3 x 1mi @ Threshold",
-              "description": "First real quality session - threshold work",
-              "durationMinutes": 50,
-              "distanceMiles": 5.5,
-              "primaryZone": "Z5a (175-179 bpm) / 8:00-8:15/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3 x 1mi @ 8:00-8:15/mi (threshold pace, HR ~175)\n  - 2:00 jog recovery between\nCOOL DOWN: 1mi easy\n\nFeel: \"comfortably hard\" - you could speak only a few words",
+              "id": "w5-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -1157,7 +1200,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery from quality",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
@@ -1182,15 +1225,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w5-thu",
+              "id": "w5-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
-              "description": "Easy with leg turnover",
+              "description": "Easy Run + Strides",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
-              "humanReadable": "40min easy + 5x20s strides at end",
+              "humanReadable": "40min easy + 5x20s strides at end\nThis is your recovery day between Mon intervals and Sat long run",
               "completed": false
             },
             {
@@ -1226,11 +1269,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w5-sat",
+              "id": "w5-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 10 miles",
-              "description": "First double-digit long run since rebuild",
+              "description": "Long Run - 10 miles",
               "durationMinutes": 100,
               "distanceMiles": 10,
               "primaryZone": "Z2",
@@ -1273,12 +1316,11 @@ ${a.join(`
           "run": {
             "sessions": 4,
             "hours": 3.9,
-            "miles": 24
+            "miles": 24.0
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in build phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -1301,6 +1343,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w6-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 4 x 1km @ VO2",
+              "description": "SPEED: 4 x 1km @ VO2",
+              "durationMinutes": 55,
+              "distanceMiles": 6,
+              "primaryZone": "Z5b / 7:30-7:40/mi",
+              "humanReadable": "VO2max intervals\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 1km (~0.62mi) @ 7:30-7:40/mi\n  - 90s jog recovery between\nCOOL DOWN: 1mi easy\n\nLast 200m of each rep should be HARD - HR climbing into 180s",
+              "completed": false
+            },
+            {
               "id": "w6-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -1318,15 +1372,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w6-tue",
-              "sport": "run",
-              "type": "tempo",
-              "name": "Tempo Run - 3 mile continuous",
-              "description": "Sustained threshold work",
-              "durationMinutes": 55,
-              "distanceMiles": 6,
-              "primaryZone": "Z4-5a / 8:10-8:20/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi continuous @ 8:10-8:20/mi (just under threshold)\n  - HR target: 168-175\n  - If HR rising past 178, ease off\nCOOL DOWN: 1.5mi easy",
+              "id": "w6-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -1340,7 +1391,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
@@ -1365,15 +1416,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w6-thu",
+              "id": "w6-thu-run",
               "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Aerobic with strides",
-              "durationMinutes": 45,
-              "distanceMiles": 4.5,
-              "primaryZone": "Z2",
-              "humanReadable": "40min easy + 6x20s strides",
+              "type": "tempo",
+              "name": "TEMPO: 3 mile continuous",
+              "description": "TEMPO: 3 mile continuous",
+              "durationMinutes": 55,
+              "distanceMiles": 6,
+              "primaryZone": "Z4-5a / 8:10-8:20/mi",
+              "humanReadable": "Sustained threshold work\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi continuous @ 8:10-8:20/mi (just under threshold)\n  - HR target: 168-175\n  - If HR rising past 178, ease off\nCOOL DOWN: 1.5mi easy\n\nNote: legs will be slightly tired from Wed PM lift - this is expected. Body adapts.",
               "completed": false
             },
             {
@@ -1409,11 +1460,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w6-sat",
+              "id": "w6-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run 11mi - 2mi @ HMP",
-              "description": "First half-marathon-pace work in long run",
+              "description": "Long Run 11mi - 2mi @ HMP",
               "durationMinutes": 110,
               "distanceMiles": 11,
               "primaryZone": "Z2 + Z4",
@@ -1455,13 +1506,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.2,
-            "miles": 25.5
+            "hours": 4.3,
+            "miles": 27
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in build phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -1484,6 +1534,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w7-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 5 x 1km @ VO2",
+              "description": "SPEED: 5 x 1km @ VO2",
+              "durationMinutes": 60,
+              "distanceMiles": 6.5,
+              "primaryZone": "Z5b / 7:30-7:40/mi",
+              "humanReadable": "VO2max + threshold development\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 5 x 1km @ 7:30-7:40/mi\n  - 90s jog recovery\nCOOL DOWN: 1mi easy\n\nGoal: even splits or slight progression",
+              "completed": false
+            },
+            {
               "id": "w7-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -1501,15 +1563,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w7-tue",
-              "sport": "run",
-              "type": "intervals",
-              "name": "Cruise Intervals - 4 x 1mi",
-              "description": "Threshold development",
-              "durationMinutes": 60,
-              "distanceMiles": 6.5,
-              "primaryZone": "Z5a / 8:00-8:10/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 1mi @ 8:00-8:10/mi (threshold)\n  - 90s jog recovery between\nCOOL DOWN: 1mi easy\n\nGoal: even splits or slight progression",
+              "id": "w7-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -1523,7 +1582,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
@@ -1548,15 +1607,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w7-thu",
+              "id": "w7-thu-run",
               "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Aerobic with leg speed",
-              "durationMinutes": 50,
-              "distanceMiles": 5,
-              "primaryZone": "Z2",
-              "humanReadable": "45min easy + 6x20s strides",
+              "type": "tempo",
+              "name": "TEMPO: 4 mile continuous",
+              "description": "TEMPO: 4 mile continuous",
+              "durationMinutes": 65,
+              "distanceMiles": 7,
+              "primaryZone": "Z4-5a / 8:00-8:15/mi",
+              "humanReadable": "Extended threshold\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4mi continuous @ 8:00-8:15/mi (threshold)\n  - HR target: 170-178\nCOOL DOWN: 1.5mi easy",
               "completed": false
             },
             {
@@ -1592,11 +1651,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w7-sat",
+              "id": "w7-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 13 miles (HM distance!)",
-              "description": "Half-marathon distance long run, mostly aerobic",
+              "description": "Long Run - 13 miles (HM distance!)",
               "durationMinutes": 130,
               "distanceMiles": 13,
               "primaryZone": "Z2 + brief Z3-4",
@@ -1638,13 +1697,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.7,
-            "miles": 29
+            "hours": 5.0,
+            "miles": 31.0
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in build phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -1667,6 +1725,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w8-mon-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run + Strides",
+              "description": "Easy Run + Strides",
+              "durationMinutes": 40,
+              "distanceMiles": 4,
+              "primaryZone": "Z2",
+              "humanReadable": "35min easy + 5x20s strides - light shake-out, cutback week",
+              "completed": false
+            },
+            {
               "id": "w8-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -1684,15 +1754,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w8-tue",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Light shake-out",
-              "durationMinutes": 40,
-              "distanceMiles": 4,
-              "primaryZone": "Z2",
-              "humanReadable": "35min easy + 5x20s strides",
+              "id": "w8-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -1706,7 +1773,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Aerobic",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
@@ -1731,15 +1798,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w8-thu",
+              "id": "w8-thu-run",
               "sport": "run",
               "type": "tempo",
-              "name": "Short Tempo - 2mi @ HMP",
-              "description": "Sharp intensity touch",
+              "name": "Short TEMPO: 2mi @ HMP",
+              "description": "Short TEMPO: 2mi @ HMP",
               "durationMinutes": 45,
               "distanceMiles": 5,
               "primaryZone": "Z4 / 8:30/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 2mi @ 8:30/mi (HMP - feel sharp not strained)\nCOOL DOWN: 1.5mi easy",
+              "humanReadable": "Sharp intensity touch\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 2mi @ 8:30/mi (HMP - feel sharp not strained)\nCOOL DOWN: 1.5mi easy",
               "completed": false
             },
             {
@@ -1775,11 +1842,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w8-sat",
+              "id": "w8-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 9 miles (cutback)",
-              "description": "Recovery long run",
+              "description": "Long Run - 9 miles (cutback)",
               "durationMinutes": 90,
               "distanceMiles": 9,
               "primaryZone": "Z2",
@@ -1826,8 +1893,7 @@ ${a.join(`
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in light phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -1850,6 +1916,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w9-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 4 x 1mi @ HMP",
+              "description": "SPEED: 4 x 1mi @ HMP",
+              "durationMinutes": 60,
+              "distanceMiles": 6.5,
+              "primaryZone": "Z4 / 8:30/mi",
+              "humanReadable": "Race-pace intervals - practice your goal race pace\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 1mi @ 8:30/mi (Bryce goal pace)\n  - 90s jog between\n  - These should feel CONTROLLED at goal pace - if you're straining, your goal is too aggressive\nCOOL DOWN: 1mi easy",
+              "completed": false
+            },
+            {
               "id": "w9-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -1867,15 +1945,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w9-tue",
-              "sport": "run",
-              "type": "intervals",
-              "name": "Race-Pace Intervals - 4 x 1mi @ HMP",
-              "description": "Practice your goal race pace",
-              "durationMinutes": 60,
-              "distanceMiles": 6.5,
-              "primaryZone": "Z4 / 8:30/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 1mi @ 8:30/mi (Bryce goal pace)\n  - 90s jog between\n  - These should feel CONTROLLED at goal pace - if you're straining, your goal is too aggressive\nCOOL DOWN: 1mi easy",
+              "id": "w9-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -1889,7 +1964,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
@@ -1914,15 +1989,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w9-thu",
+              "id": "w9-thu-run",
               "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Sharp legs",
-              "durationMinutes": 45,
-              "distanceMiles": 4.5,
-              "primaryZone": "Z2",
-              "humanReadable": "40min easy + 6x20s strides",
+              "type": "tempo",
+              "name": "TEMPO: 3mi @ HMP",
+              "description": "TEMPO: 3mi @ HMP",
+              "durationMinutes": 55,
+              "distanceMiles": 6,
+              "primaryZone": "Z4 / 8:30/mi",
+              "humanReadable": "Race-pace tempo\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi @ 8:30/mi (HMP - dress rehearsal pace)\nCOOL DOWN: 1.5mi easy",
               "completed": false
             },
             {
@@ -1958,15 +2033,15 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w9-sat",
+              "id": "w9-sat-run",
               "sport": "run",
               "type": "long",
-              "name": "Long Run 12mi - Final Pre-Race Long Run",
-              "description": "Last meaningful long run before Bryce",
+              "name": "Long Run 12mi - Final Pre-Race",
+              "description": "Long Run 12mi - Final Pre-Race",
               "durationMinutes": 120,
               "distanceMiles": 12,
               "primaryZone": "Z2 + Z4 segment",
-              "humanReadable": "12mi total\n  - Mi 1-8: easy @ 9:30-9:50/mi\n  - Mi 9-11: 3mi @ HMP (8:30/mi) - DRESS REHEARSAL\n  - Mi 12: easy\n\nPRACTICE YOUR RACE NUTRITION:\n  - Same breakfast you'll eat on race day\n  - Gel at mile 4, mile 8\n  - Same hydration plan",
+              "humanReadable": "12mi total - last meaningful long run before Bryce\n  - Mi 1-8: easy @ 9:30-9:50/mi\n  - Mi 9-11: 3mi @ HMP (8:30/mi) - DRESS REHEARSAL\n  - Mi 12: easy\n\nPRACTICE YOUR RACE NUTRITION:\n  - Same breakfast you'll eat on race day\n  - Gel at mile 4, mile 8\n  - Same hydration plan",
               "completed": false
             }
           ]
@@ -2004,13 +2079,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.4,
-            "miles": 27
+            "hours": 4.6,
+            "miles": 28.5
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in maintain phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -2033,11 +2107,15 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w10-mon",
-              "sport": "rest",
-              "type": "rest",
-              "name": "Rest Day",
-              "description": "Start of race week",
+              "id": "w10-mon-run",
+              "sport": "run",
+              "type": "tempo",
+              "name": "Race-Pace Touch: 2 x 1mi @ HMP",
+              "description": "Race-Pace Touch: 2 x 1mi @ HMP",
+              "durationMinutes": 45,
+              "distanceMiles": 5,
+              "primaryZone": "Z4 / 8:30/mi",
+              "humanReadable": "Sharp legs, no fatigue\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 2 x 1mi @ 8:30/mi (HMP)\n  - 2:00 jog recovery\nCOOL DOWN: 1.5mi easy\n\nShould feel CRISP - that's the goal of race week",
               "completed": false
             }
           ]
@@ -2047,15 +2125,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w10-tue",
-              "sport": "run",
-              "type": "tempo",
-              "name": "Race-Pace Touch - 2 x 1mi @ HMP",
-              "description": "Sharp legs, no fatigue",
-              "durationMinutes": 45,
-              "distanceMiles": 5,
-              "primaryZone": "Z4 / 8:30/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 2 x 1mi @ 8:30/mi (HMP)\n  - 2:00 jog recovery\nCOOL DOWN: 1.5mi easy\n\nShould feel CRISP - that's the goal of race week",
+              "id": "w10-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -2065,15 +2140,15 @@ ${a.join(`
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w10-wed",
+              "id": "w10-wed-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Short and easy",
+              "description": "Easy Run",
               "durationMinutes": 30,
               "distanceMiles": 3,
               "primaryZone": "Z2",
-              "humanReadable": "30min easy. SKIP lift this week.",
+              "humanReadable": "30min easy. NO LIFTING this week from here on.",
               "completed": false
             }
           ]
@@ -2083,11 +2158,11 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w10-thu",
+              "id": "w10-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Shake-out Run + Strides",
-              "description": "Wake up the legs",
+              "description": "Shake-out Run + Strides",
               "durationMinutes": 30,
               "distanceMiles": 3,
               "primaryZone": "Z2",
@@ -2101,11 +2176,11 @@ ${a.join(`
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w10-fri",
+              "id": "w10-fri-run",
               "sport": "run",
               "type": "easy",
-              "name": "Pre-Race Shake-out 20min",
-              "description": "Loose legs, race day prep",
+              "name": "Pre-Race Shake-out",
+              "description": "Pre-Race Shake-out",
               "durationMinutes": 20,
               "distanceMiles": 2,
               "primaryZone": "Z1-2",
@@ -2119,11 +2194,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w10-sat-race",
+              "id": "w10-sat-run",
               "sport": "run",
               "type": "race",
               "name": "\ud83c\udfc1 RACE: Bryce Canyon Half Marathon",
-              "description": "TUNE-UP RACE - target sub-1:50 (downhill course)",
+              "description": "\ud83c\udfc1 RACE: Bryce Canyon Half Marathon",
               "durationMinutes": 110,
               "distanceMiles": 13.1,
               "primaryZone": "Z4 / 8:25-8:35/mi avg",
@@ -2137,12 +2212,12 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w10-sun",
+              "id": "w10-sun-rest",
               "sport": "rest",
               "type": "rest",
-              "name": "Full Rest - Recovery",
-              "description": "Walk only, eat well, hydrate",
-              "humanReadable": "Easy walking only. Hydrate. Eat well. CELEBRATE.",
+              "name": "Rest Day",
+              "description": "Full rest",
+              "humanReadable": "Full rest",
               "completed": false
             }
           ]
@@ -2153,13 +2228,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 5,
-            "hours": 3.5,
+            "hours": 3.9,
             "miles": 26.1
           },
           "strength": {
             "sessions": 0,
-            "hours": 0.0,
-            "notes": "Race week - mobility only"
+            "hours": 0.0
           }
         }
       }
@@ -2178,14 +2252,12 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w11-mon-lift",
-              "sport": "strength",
-              "type": "strength",
-              "name": "B: Upper Pull (Climbing)",
-              "description": "Lift B - Climbing-focused pulling. Phase: light.",
-              "durationMinutes": 50,
-              "primaryZone": "Strength - light block",
-              "humanReadable": "UPPER PULL - Climbing focus\nGoal: Maximum pulling strength for climbing. This is your highest-priority lift session for climbing performance.\n\nDeload week: 2 sets, 8 reps, RPE 5-6 (very controlled). Active recovery only.\n\nWARM UP (8 min):\n  - 5 min light pulling (banded or jumping pull-ups easy)\n  - Shoulder CARs x 5 each direction\n  - Scap pull-ups x 10\n  - Band pull-aparts x 15\n  - Easy hangs (bar) 2x 15s\n\nMAIN LIFT:\n1. WEIGHTED PULL-UP (or strict bodyweight if not yet weighted): 2x3-5 (well below max)\n   - Full ROM: chin clearly over bar, full elbow extension at bottom\n   - Climbing's #1 strength predictor\n\n2. ONE-ARM DUMBBELL ROW: 2x8 (moderate) EACH\n   - Pause at top, control descent. Lock shoulder blade down.\n\n3. INVERTED ROW or TRX ROW: 2x10\n   - Horizontal pulling balances vertical (pull-up)\n\n4. HANGBOARD PROTOCOL: 3 sets max hang 5s on 20mm edge (just to maintain feel)\n   - 20mm edges, half-crimp or open-hand\n   - 90 sec rest between hangs\n   - SKIP if fingers feel sore from climbing this week\n\n5. FACE PULL: 3x12-15\n   - External rotation + scap retraction = healthy shoulders for high-volume climbing\n\n6. HAMMER CURL (forearm flexor + brachialis): 2x10\n   - Forearm endurance for sustained crimping. KEEP this brief - not the goal.\n\n7. WRIST CURL + WRIST EXTENSION: 2x12 each\n   - Forearm extensor balance prevents elbow tendinopathy from climbing\n\n8. DEAD HANG (open-hand): 3x max time (target 45s+)\n   - Grip endurance + scap stability\n\nTotal time: 50-60 min",
+              "id": "w11-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest Day",
+              "description": "Full rest - post-race recovery. Walk only.",
+              "humanReadable": "Full rest - post-race recovery. Walk only.",
               "completed": false
             }
           ]
@@ -2195,12 +2267,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w11-tue",
+              "id": "w11-tue-rest",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest or 20min walk",
-              "description": "Optional easy movement",
-              "humanReadable": "Walking only. No running.",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -2210,15 +2282,15 @@ ${a.join(`
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w11-wed",
+              "id": "w11-wed-run",
               "sport": "run",
               "type": "easy",
-              "name": "First Run Back - 25min easy",
-              "description": "Test the legs",
+              "name": "First Run Back",
+              "description": "First Run Back",
               "durationMinutes": 25,
               "distanceMiles": 2.5,
               "primaryZone": "Z1-2",
-              "humanReadable": "25min very easy @ 10:00+/mi. If anything feels off, walk it in.",
+              "humanReadable": "25min very easy @ 10:00+/mi. If anything feels off, walk it in.\nFirst run after Bryce - listen to body.",
               "completed": false
             },
             {
@@ -2239,12 +2311,12 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w11-thu",
+              "id": "w11-thu-rest",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest or Climb (light)",
-              "description": "Easy",
-              "humanReadable": "Rest or relaxed climb (60min, low intensity)",
+              "name": "Rest Day",
+              "description": "Rest or light climb (technical only)",
+              "humanReadable": "Rest or light climb (technical only)",
               "completed": false
             },
             {
@@ -2283,11 +2355,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w11-sat",
+              "id": "w11-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Easy Long-ish Run - 7 miles",
-              "description": "Re-introduce moderate distance",
+              "description": "Easy Long-ish Run - 7 miles",
               "durationMinutes": 70,
               "distanceMiles": 7,
               "primaryZone": "Z2",
@@ -2330,16 +2402,15 @@ ${a.join(`
           "run": {
             "sessions": 3,
             "hours": 2.2,
-            "miles": 13
+            "miles": 13.0
           },
           "cross": {
             "sessions": 1,
             "hours": 1.5
           },
           "strength": {
-            "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in light phase"
+            "sessions": 3,
+            "hours": 2.25
           }
         }
       }
@@ -2358,6 +2429,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w12-mon-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run + Strides",
+              "description": "Easy Run + Strides",
+              "durationMinutes": 45,
+              "distanceMiles": 4.5,
+              "primaryZone": "Z2",
+              "humanReadable": "40min easy + 6x20s strides - re-introducing structure",
+              "completed": false
+            },
+            {
               "id": "w12-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -2375,15 +2458,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w12-tue",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Aerobic",
-              "durationMinutes": 45,
-              "distanceMiles": 4.5,
-              "primaryZone": "Z2",
-              "humanReadable": "40min easy + 6x20s strides",
+              "id": "w12-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -2397,7 +2477,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Aerobic",
+              "description": "Easy Run",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
@@ -2422,15 +2502,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w12-thu",
+              "id": "w12-thu-run",
               "sport": "run",
               "type": "medium",
               "name": "Medium-Long Run - 6 miles",
-              "description": "New mid-week distance run for marathon base",
+              "description": "Medium-Long Run - 6 miles",
               "durationMinutes": 60,
               "distanceMiles": 6,
               "primaryZone": "Z2",
-              "humanReadable": "6mi @ 9:30-10:00/mi - this builds aerobic durability mid-week",
+              "humanReadable": "6mi @ 9:30-10:00/mi - building aerobic durability mid-week\nNo tempo yet - just steady aerobic",
               "completed": false
             },
             {
@@ -2466,11 +2546,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w12-sat",
+              "id": "w12-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 12 miles",
-              "description": "Return to long-run building",
+              "description": "Long Run - 12 miles",
               "durationMinutes": 120,
               "distanceMiles": 12,
               "primaryZone": "Z2",
@@ -2512,13 +2592,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.4,
-            "miles": 27
+            "hours": 4.5,
+            "miles": 27.0
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in maintain phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -2541,6 +2620,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w13-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 4 x 1mi @ Threshold",
+              "description": "SPEED: 4 x 1mi @ Threshold",
+              "durationMinutes": 60,
+              "distanceMiles": 6.5,
+              "primaryZone": "Z5a / 8:00/mi",
+              "humanReadable": "Threshold development\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 1mi @ 8:00/mi\n  - 90s jog recovery\nCOOL DOWN: 1mi easy",
+              "completed": false
+            },
+            {
               "id": "w13-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -2558,15 +2649,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w13-tue",
-              "sport": "run",
-              "type": "tempo",
-              "name": "Tempo - 3mi @ MP",
-              "description": "First marathon-pace work",
-              "durationMinutes": 55,
-              "distanceMiles": 6,
-              "primaryZone": "Z3 / 8:35/mi (MP)",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi @ 8:35/mi (St. George goal MP)\n  - HR target: 158-165\n  - Should feel COMFORTABLE - if it doesn't, MP is too aggressive\nCOOL DOWN: 1.5mi easy",
+              "id": "w13-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -2580,7 +2668,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
@@ -2605,15 +2693,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w13-thu",
+              "id": "w13-thu-run",
               "sport": "run",
-              "type": "medium",
-              "name": "Medium-Long Run - 7 miles",
-              "description": "Aerobic durability",
-              "durationMinutes": 70,
-              "distanceMiles": 7,
-              "primaryZone": "Z2",
-              "humanReadable": "7mi @ 9:30-9:50/mi",
+              "type": "tempo",
+              "name": "TEMPO: 3mi @ MP",
+              "description": "TEMPO: 3mi @ MP",
+              "durationMinutes": 55,
+              "distanceMiles": 6,
+              "primaryZone": "Z3 / 8:35/mi (MP)",
+              "humanReadable": "First marathon-pace work\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi @ 8:35/mi (St. George goal MP)\n  - HR target: 158-165\n  - Should feel COMFORTABLE - if it doesn't, MP is too aggressive\nCOOL DOWN: 1.5mi easy",
               "completed": false
             },
             {
@@ -2649,11 +2737,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w13-sat",
+              "id": "w13-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 14 miles",
-              "description": "Pure aerobic long run",
+              "description": "Long Run - 14 miles",
               "durationMinutes": 140,
               "distanceMiles": 14,
               "primaryZone": "Z2",
@@ -2695,13 +2783,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.7,
-            "miles": 31.5
+            "hours": 5.0,
+            "miles": 31.0
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in maintain phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -2724,6 +2811,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w14-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 5 x 1km @ VO2",
+              "description": "SPEED: 5 x 1km @ VO2",
+              "durationMinutes": 60,
+              "distanceMiles": 6.5,
+              "primaryZone": "Z5b / 7:30-7:45/mi",
+              "humanReadable": "VO2max development\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 5 x 1km @ 7:30-7:45/mi\n  - 90s jog recovery\nCOOL DOWN: 1mi easy",
+              "completed": false
+            },
+            {
               "id": "w14-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -2741,15 +2840,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w14-tue",
-              "sport": "run",
-              "type": "intervals",
-              "name": "Cruise Intervals - 4 x 1mi @ Threshold",
-              "description": "Threshold development",
-              "durationMinutes": 60,
-              "distanceMiles": 6.5,
-              "primaryZone": "Z5a / 8:00/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 1mi @ 8:00/mi (threshold)\n  - 90s jog recovery\nCOOL DOWN: 1mi easy",
+              "id": "w14-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -2763,7 +2859,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
@@ -2788,15 +2884,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w14-thu",
+              "id": "w14-thu-run",
               "sport": "run",
               "type": "medium",
-              "name": "Medium-Long Run 8mi - last 2mi @ MP",
-              "description": "First MP work in the medium-long",
+              "name": "Medium-Long w/ MP: 8mi (last 2mi @ MP)",
+              "description": "Medium-Long w/ MP: 8mi (last 2mi @ MP)",
               "durationMinutes": 75,
               "distanceMiles": 8,
               "primaryZone": "Z2 + Z3",
-              "humanReadable": "8mi total\n  - Mi 1-6: easy @ 9:30-9:45/mi\n  - Mi 7-8: 2mi @ 8:35/mi (MP)\n\nThis teaches running MP on tired legs",
+              "humanReadable": "First MP work in the medium-long\n\n8mi total\n  - Mi 1-6: easy @ 9:30-9:45/mi\n  - Mi 7-8: 2mi @ 8:35/mi (MP)\n\nThis teaches running MP on tired legs",
               "completed": false
             },
             {
@@ -2832,11 +2928,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w14-sat",
+              "id": "w14-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 16 miles",
-              "description": "Cap of base phase",
+              "description": "Long Run - 16 miles",
               "durationMinutes": 160,
               "distanceMiles": 16,
               "primaryZone": "Z2",
@@ -2878,13 +2974,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 5.1,
-            "miles": 35
+            "hours": 5.7,
+            "miles": 35.0
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in maintain phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -2907,6 +3002,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w15-mon-run",
+              "sport": "run",
+              "type": "tempo",
+              "name": "TEMPO Short: 3mi @ MP",
+              "description": "TEMPO Short: 3mi @ MP",
+              "durationMinutes": 55,
+              "distanceMiles": 6,
+              "primaryZone": "Z3 / 8:35/mi",
+              "humanReadable": "Maintain intensity touch\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi @ 8:30-8:35/mi (MP)\nCOOL DOWN: 1.5mi easy",
+              "completed": false
+            },
+            {
               "id": "w15-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -2924,15 +3031,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w15-tue",
-              "sport": "run",
-              "type": "tempo",
-              "name": "Short Tempo - 3mi @ MP",
-              "description": "Maintain intensity touch",
-              "durationMinutes": 55,
-              "distanceMiles": 6,
-              "primaryZone": "Z3 / 8:35/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi @ 8:30-8:35/mi (MP)\nCOOL DOWN: 1.5mi easy",
+              "id": "w15-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -2946,11 +3050,11 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
-              "humanReadable": "40min easy",
+              "humanReadable": "40min easy - cutback week, keep it relaxed",
               "completed": false
             },
             {
@@ -2971,11 +3075,11 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w15-thu",
+              "id": "w15-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
-              "description": "Aerobic with strides",
+              "description": "Easy Run + Strides",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
@@ -3015,11 +3119,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w15-sat",
+              "id": "w15-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 12 miles (cutback)",
-              "description": "Recovery cutback before peak block",
+              "description": "Long Run - 12 miles (cutback)",
               "durationMinutes": 120,
               "distanceMiles": 12,
               "primaryZone": "Z2",
@@ -3061,13 +3165,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.0,
+            "hours": 4.3,
             "miles": 26.5
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in light phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -3090,6 +3193,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w16-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 5 x 1km @ VO2",
+              "description": "SPEED: 5 x 1km @ VO2",
+              "durationMinutes": 65,
+              "distanceMiles": 7,
+              "primaryZone": "Z5b / 7:30-7:45/mi",
+              "humanReadable": "Aerobic capacity development\n\nWARM UP: 2mi easy + 4x20s strides\nMAIN: 5 x 1km @ 7:30-7:45/mi\n  - 400m (~2:30) jog recovery between\nCOOL DOWN: 1mi easy\n\nFeel: HARD - HR ~180-185 by the last 200m of each rep",
+              "completed": false
+            },
+            {
               "id": "w16-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -3107,15 +3222,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w16-tue",
-              "sport": "run",
-              "type": "intervals",
-              "name": "VO2 Intervals - 5 x 1000m @ I pace",
-              "description": "Aerobic capacity development",
-              "durationMinutes": 65,
-              "distanceMiles": 7,
-              "primaryZone": "Z5b / 7:30-7:45/mi",
-              "humanReadable": "WARM UP: 2mi easy + 4x20s strides\nMAIN: 5 x 1000m (~0.62mi) @ 7:30-7:45/mi\n  - 400m (~2:30) jog recovery between\nCOOL DOWN: 1mi easy\n\nFeel: HARD - HR ~180-185 by the last 200m of each rep",
+              "id": "w16-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -3129,7 +3241,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 45,
               "distanceMiles": 4.5,
               "primaryZone": "Z2",
@@ -3154,15 +3266,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w16-thu",
+              "id": "w16-thu-run",
               "sport": "run",
               "type": "medium",
-              "name": "Medium-Long Run 8mi w/ 3mi @ MP",
-              "description": "MP fitness on moderate fatigue",
+              "name": "Medium-Long w/ MP: 8mi (3mi @ MP)",
+              "description": "Medium-Long w/ MP: 8mi (3mi @ MP)",
               "durationMinutes": 75,
               "distanceMiles": 8,
               "primaryZone": "Z2 + Z3",
-              "humanReadable": "8mi total\n  - Mi 1-4: easy @ 9:30-9:45/mi\n  - Mi 5-7: 3mi @ 8:35/mi (MP)\n  - Mi 8: easy cool",
+              "humanReadable": "MP fitness on moderate fatigue\n\n8mi total\n  - Mi 1-4: easy @ 9:30-9:45/mi\n  - Mi 5-7: 3mi @ 8:35/mi (MP)\n  - Mi 8: easy cool",
               "completed": false
             },
             {
@@ -3198,15 +3310,15 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w16-sat",
+              "id": "w16-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 18 miles",
-              "description": "First 18-miler of marathon block",
+              "description": "Long Run - 18 miles",
               "durationMinutes": 180,
               "distanceMiles": 18,
               "primaryZone": "Z2",
-              "humanReadable": "18mi @ 9:30-9:50/mi\nFUEL: gel every 4 miles (mi 4, 8, 12, 16) + sports drink throughout\nROUTE: prioritize courses with sustained downhill segments to train quad eccentric loading\nThis is St. George prep - your quads must learn to handle descent",
+              "humanReadable": "18mi @ 9:30-9:50/mi - first 18-miler of marathon block\nFUEL: gel every 4 miles (mi 4, 8, 12, 16) + sports drink throughout\nROUTE: prioritize courses with sustained downhill segments to train quad eccentric loading\nThis is St. George prep - your quads must learn to handle descent",
               "completed": false
             }
           ]
@@ -3216,15 +3328,15 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w16-sun",
+              "id": "w16-sun-jog",
               "sport": "run",
               "type": "easy",
-              "name": "Recovery Jog 3mi",
-              "description": "Shake out the legs",
+              "name": "Recovery Jog - 3 miles",
+              "description": "Active recovery from Saturday long run",
               "durationMinutes": 30,
               "distanceMiles": 3,
               "primaryZone": "Z1-2",
-              "humanReadable": "30min very easy @ 10:00+/mi - flush the legs",
+              "humanReadable": "30min very easy @ 10:00+/mi - flush legs from Saturday long run\nDO NOT push pace. This is purely circulation work.\nClimb session NOT recommended after big long runs - your body needs the rest.",
               "completed": false
             },
             {
@@ -3245,14 +3357,13 @@ ${a.join(`
         "totalHours": 5.2,
         "bySport": {
           "run": {
-            "sessions": 5,
-            "hours": 5.6,
-            "miles": 40.5
+            "sessions": 4,
+            "hours": 6.1,
+            "miles": 37.5
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in peak phase"
+            "hours": 3.0
           }
         }
       }
@@ -3271,6 +3382,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w17-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 5 x 1mi @ Threshold",
+              "description": "SPEED: 5 x 1mi @ Threshold",
+              "durationMinutes": 70,
+              "distanceMiles": 7.5,
+              "primaryZone": "Z5a / 8:00/mi",
+              "humanReadable": "Threshold development\n\nWARM UP: 2mi easy + 4x20s strides\nMAIN: 5 x 1mi @ 8:00/mi (threshold)\n  - 90s jog recovery\nCOOL DOWN: 1mi easy",
+              "completed": false
+            },
+            {
               "id": "w17-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -3288,15 +3411,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w17-tue",
-              "sport": "run",
-              "type": "tempo",
-              "name": "Tempo - 5mi continuous",
-              "description": "Sustained threshold work",
-              "durationMinutes": 75,
-              "distanceMiles": 8,
-              "primaryZone": "Z4 / 8:10-8:20/mi",
-              "humanReadable": "WARM UP: 2mi easy + 4x20s strides\nMAIN: 5mi continuous @ 8:10-8:20/mi (just under threshold)\n  - HR ceiling: 175\nCOOL DOWN: 1mi easy",
+              "id": "w17-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -3310,7 +3430,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 50,
               "distanceMiles": 5,
               "primaryZone": "Z2",
@@ -3335,15 +3455,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w17-thu",
+              "id": "w17-thu-run",
               "sport": "run",
-              "type": "medium",
-              "name": "Medium-Long Run - 9 miles easy",
-              "description": "Aerobic durability",
-              "durationMinutes": 90,
-              "distanceMiles": 9,
-              "primaryZone": "Z2",
-              "humanReadable": "9mi @ 9:30-9:50/mi - pure aerobic",
+              "type": "tempo",
+              "name": "TEMPO: 5mi continuous",
+              "description": "TEMPO: 5mi continuous",
+              "durationMinutes": 75,
+              "distanceMiles": 8,
+              "primaryZone": "Z4 / 8:10-8:20/mi",
+              "humanReadable": "Sustained threshold work\n\nWARM UP: 2mi easy + 4x20s strides\nMAIN: 5mi continuous @ 8:10-8:20/mi (just under threshold)\n  - HR ceiling: 175\nCOOL DOWN: 1mi easy",
               "completed": false
             },
             {
@@ -3379,11 +3499,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w17-sat",
+              "id": "w17-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 20 miles",
-              "description": "First 20-miler!",
+              "description": "Long Run - 20 miles",
               "durationMinutes": 200,
               "distanceMiles": 20,
               "primaryZone": "Z2",
@@ -3397,15 +3517,15 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w17-sun",
+              "id": "w17-sun-jog",
               "sport": "run",
               "type": "easy",
-              "name": "Recovery Jog 3mi",
-              "description": "Active recovery",
+              "name": "Recovery Jog - 3 miles",
+              "description": "Active recovery from Saturday long run",
               "durationMinutes": 30,
               "distanceMiles": 3,
               "primaryZone": "Z1-2",
-              "humanReadable": "30min very easy",
+              "humanReadable": "30min very easy @ 10:00+/mi - flush legs from Saturday long run\nDO NOT push pace. This is purely circulation work.\nClimb session NOT recommended after big long runs - your body needs the rest.",
               "completed": false
             },
             {
@@ -3426,14 +3546,13 @@ ${a.join(`
         "totalHours": 5.7,
         "bySport": {
           "run": {
-            "sessions": 5,
-            "hours": 6.1,
-            "miles": 45
+            "sessions": 4,
+            "hours": 6.6,
+            "miles": 40.5
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in peak phase"
+            "hours": 3.0
           }
         }
       }
@@ -3452,6 +3571,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w18-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 4 x 800m @ I pace",
+              "description": "SPEED: 4 x 800m @ I pace",
+              "durationMinutes": 50,
+              "distanceMiles": 5,
+              "primaryZone": "Z5b / 7:30-7:40/mi",
+              "humanReadable": "Maintain intensity touch\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 800m @ 7:30-7:40/mi\n  - 400m jog recovery\nCOOL DOWN: 1mi easy",
+              "completed": false
+            },
+            {
               "id": "w18-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -3469,15 +3600,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w18-tue",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Light",
-              "durationMinutes": 45,
-              "distanceMiles": 4.5,
-              "primaryZone": "Z2",
-              "humanReadable": "40min easy + 5x20s strides",
+              "id": "w18-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -3491,11 +3619,11 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Aerobic",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
-              "humanReadable": "40min easy",
+              "humanReadable": "40min easy - cutback week",
               "completed": false
             },
             {
@@ -3516,15 +3644,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w18-thu",
+              "id": "w18-thu-run",
               "sport": "run",
-              "type": "tempo",
-              "name": "Short Quality - 4 x 800m @ I pace",
-              "description": "Maintain intensity touch",
-              "durationMinutes": 50,
-              "distanceMiles": 5,
-              "primaryZone": "Z5b / 7:30-7:40/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4 x 800m @ 7:30-7:40/mi\n  - 400m jog recovery\nCOOL DOWN: 1mi easy",
+              "type": "easy",
+              "name": "Easy Run + Strides",
+              "description": "Easy Run + Strides",
+              "durationMinutes": 45,
+              "distanceMiles": 4.5,
+              "primaryZone": "Z2",
+              "humanReadable": "40min easy + 5x20s strides",
               "completed": false
             },
             {
@@ -3560,11 +3688,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w18-sat",
+              "id": "w18-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 14 miles (cutback)",
-              "description": "Recovery cutback",
+              "description": "Long Run - 14 miles (cutback)",
               "durationMinutes": 140,
               "distanceMiles": 14,
               "primaryZone": "Z2",
@@ -3606,13 +3734,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.4,
+            "hours": 4.6,
             "miles": 27.5
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in light phase"
+            "hours": 3.0
           },
           "cross": {
             "sessions": 1,
@@ -3635,6 +3762,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w19-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 5 x 1mi @ Threshold",
+              "description": "SPEED: 5 x 1mi @ Threshold",
+              "durationMinutes": 70,
+              "distanceMiles": 8,
+              "primaryZone": "Z5a / 7:55-8:05/mi",
+              "humanReadable": "Threshold development - peak\n\nWARM UP: 2mi easy + 4x20s strides\nMAIN: 5 x 1mi @ 7:55-8:05/mi (threshold)\n  - 90s jog recovery\nCOOL DOWN: 1mi easy",
+              "completed": false
+            },
+            {
               "id": "w19-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -3652,15 +3791,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w19-tue",
-              "sport": "run",
-              "type": "intervals",
-              "name": "Cruise Intervals - 5 x 1mi @ Threshold",
-              "description": "Threshold development",
-              "durationMinutes": 70,
-              "distanceMiles": 8,
-              "primaryZone": "Z5a / 7:55-8:05/mi",
-              "humanReadable": "WARM UP: 2mi easy + 4x20s strides\nMAIN: 5 x 1mi @ 7:55-8:05/mi (threshold)\n  - 90s jog recovery\nCOOL DOWN: 1mi easy",
+              "id": "w19-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -3674,7 +3810,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 50,
               "distanceMiles": 5,
               "primaryZone": "Z2",
@@ -3699,15 +3835,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w19-thu",
+              "id": "w19-thu-run",
               "sport": "run",
               "type": "medium",
-              "name": "Medium-Long Run 9mi w/ 4mi @ MP",
-              "description": "Heavy MP work mid-week",
+              "name": "Medium-Long w/ MP: 9mi (4mi @ MP)",
+              "description": "Medium-Long w/ MP: 9mi (4mi @ MP)",
               "durationMinutes": 85,
               "distanceMiles": 9,
               "primaryZone": "Z2 + Z3",
-              "humanReadable": "9mi total\n  - Mi 1-4: easy @ 9:30-9:45/mi\n  - Mi 5-8: 4mi @ 8:35/mi (MP)\n  - Mi 9: easy cool\n\nMP should feel STEADY. If it's straining, your goal pace needs review.",
+              "humanReadable": "Heavy MP work mid-week\n\n9mi total\n  - Mi 1-4: easy @ 9:30-9:45/mi\n  - Mi 5-8: 4mi @ 8:35/mi (MP)\n  - Mi 9: easy cool\n\nMP should feel STEADY. If it's straining, your goal pace needs review.",
               "completed": false
             },
             {
@@ -3743,11 +3879,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w19-sat",
+              "id": "w19-sat-run",
               "sport": "run",
               "type": "long",
               "name": "PEAK Long Run - 20mi w/ 6mi @ MP",
-              "description": "The biggest workout of the plan",
+              "description": "PEAK Long Run - 20mi w/ 6mi @ MP",
               "durationMinutes": 200,
               "distanceMiles": 20,
               "primaryZone": "Z2 + Z3",
@@ -3761,15 +3897,15 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w19-sun",
+              "id": "w19-sun-jog",
               "sport": "run",
               "type": "easy",
-              "name": "Recovery Jog 3mi",
-              "description": "Active recovery",
+              "name": "Recovery Jog - 3 miles",
+              "description": "Active recovery from Saturday long run",
               "durationMinutes": 30,
               "distanceMiles": 3,
               "primaryZone": "Z1-2",
-              "humanReadable": "30min very easy - flush legs",
+              "humanReadable": "30min very easy @ 10:00+/mi - flush legs from Saturday long run\nDO NOT push pace. This is purely circulation work.\nClimb session NOT recommended after big long runs - your body needs the rest.",
               "completed": false
             },
             {
@@ -3790,14 +3926,13 @@ ${a.join(`
         "totalHours": 6.3,
         "bySport": {
           "run": {
-            "sessions": 5,
-            "hours": 6.7,
-            "miles": 45
+            "sessions": 4,
+            "hours": 6.8,
+            "miles": 42
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in peak phase"
+            "hours": 3.0
           }
         }
       }
@@ -3816,6 +3951,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w20-mon-run",
+              "sport": "run",
+              "type": "tempo",
+              "name": "TEMPO: 4mi @ Threshold",
+              "description": "TEMPO: 4mi @ Threshold",
+              "durationMinutes": 65,
+              "distanceMiles": 7,
+              "primaryZone": "Z4-5a / 8:00-8:15/mi",
+              "humanReadable": "Sharp threshold touch\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4mi continuous @ 8:00-8:15/mi\nCOOL DOWN: 1mi easy",
+              "completed": false
+            },
+            {
               "id": "w20-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -3833,15 +3980,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w20-tue",
-              "sport": "run",
-              "type": "tempo",
-              "name": "Tempo - 4mi @ Threshold",
-              "description": "Sharp threshold touch",
-              "durationMinutes": 65,
-              "distanceMiles": 7,
-              "primaryZone": "Z4-5a / 8:00-8:15/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 4mi continuous @ 8:00-8:15/mi\nCOOL DOWN: 1mi easy",
+              "id": "w20-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -3855,7 +3999,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 50,
               "distanceMiles": 5,
               "primaryZone": "Z2",
@@ -3880,15 +4024,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w20-thu",
+              "id": "w20-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
-              "description": "Aerobic",
+              "description": "Easy Run + Strides",
               "durationMinutes": 50,
               "distanceMiles": 5,
               "primaryZone": "Z2",
-              "humanReadable": "45min easy + 6x20s strides",
+              "humanReadable": "45min easy + 6x20s strides\nKeep this CONTROLLED - big day Saturday",
               "completed": false
             },
             {
@@ -3924,11 +4068,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w20-sat",
+              "id": "w20-sat-run",
               "sport": "run",
               "type": "long",
               "name": "FINAL Long Run - 22mi w/ 8mi @ MP",
-              "description": "Last big effort - dress rehearsal",
+              "description": "FINAL Long Run - 22mi w/ 8mi @ MP",
               "durationMinutes": 220,
               "distanceMiles": 22,
               "primaryZone": "Z2 + Z3",
@@ -3942,23 +4086,12 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w20-sun",
+              "id": "w20-sun-rest",
               "sport": "rest",
               "type": "rest",
               "name": "Full Rest",
-              "description": "Earned recovery",
-              "humanReadable": "FULL rest after that 22-miler. Walking only.",
-              "completed": false
-            },
-            {
-              "id": "w20-sun-lift",
-              "sport": "strength",
-              "type": "strength",
-              "name": "D: Lower Power + Foot",
-              "description": "Lift D - Plyometric + injury prevention. Phase: maintain.",
-              "durationMinutes": 50,
-              "primaryZone": "Strength - maintain block",
-              "humanReadable": "LOWER POWER + FOOT/STABILITY - Light, plyometric, prevention\nGoal: Plyometric power for running economy + foot/calf injury prevention. KEEP THIS LIGHT.\nYou did your heavy lower work on Wed; this is pure quality movement, not loading.\n\nMaintain phase: 3 sets, 6-8 reps, RPE 7. Hold strength while running takes priority.\n\nWARM UP (5 min):\n  - Easy jog 5 min OR jump rope\n  - Ankle CARs x 10 each direction\n  - Calf stretch + Soleus stretch (knee-bent) 30s each\n  - A-skips x 20m, B-skips x 20m\n\nMAIN MOVEMENT (POWER):\n1. POGO HOPS (low, springy): 3x30s\n   - Stay on the ball of foot, minimal ground contact\n   - Building tendon stiffness = running economy\n\n2. BOX JUMP UP: 3x5 (moderate height, soft landing)\n\n3. SINGLE-LEG BOUNDING (controlled): 2x10 EACH (ONLY if form is clean - skip if fatigued)\n\nPREVENTION & STABILITY:\n4. SINGLE-LEG GLUTE BRIDGE: 3x10 EACH leg\n   - 1-second pause at top\n   - Often-neglected glute med work\n\n5. TIBIALIS RAISE (back to wall, lift toes up): 3x15 EACH leg\n   - The anterior shin muscle prevents shin splints. Critical for high-mileage weeks.\n\n6. SINGLE-LEG CALF RAISE (slow, off step): 3x12 EACH\n   - 3-sec eccentric. Achilles resilience.\n\n7. TOE YOGA / SHORT FOOT: 2-3 minutes\n   - Activate intrinsic foot muscles. Spread toes, press big toe down without curling\n   - Foot strength = injury prevention (plantar fasciitis, etc.)\n\n8. HIP 90/90 mobility: 2-3 min total\n   - Hip rotational mobility - both running and climbing demand this\n\n9. COUCH STRETCH: 90s each side\n   - Hip flexor length. You sit a lot.\n\nTotal time: 30-40 min",
+              "description": "FULL rest after the 22-mile dress rehearsal. Walking only.\nLast chance to fully recover before race week begins.",
+              "humanReadable": "FULL rest after the 22-mile dress rehearsal. Walking only.\nLast chance to fully recover before race week begins.",
               "completed": false
             }
           ]
@@ -3969,13 +4102,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 7.2,
+            "hours": 6.4,
             "miles": 39
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in maintain phase"
+            "hours": 3.0
           }
         }
       }
@@ -3994,6 +4126,18 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
+              "id": "w21-mon-run",
+              "sport": "run",
+              "type": "intervals",
+              "name": "SPEED: 3 x 1mi @ Threshold",
+              "description": "SPEED: 3 x 1mi @ Threshold",
+              "durationMinutes": 55,
+              "distanceMiles": 6,
+              "primaryZone": "Z5a / 8:00/mi",
+              "humanReadable": "Maintain threshold sharpness\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3 x 1mi @ 8:00/mi\n  - 90s jog recovery\nCOOL DOWN: 1mi easy\n\nReps should feel CONTROLLED",
+              "completed": false
+            },
+            {
               "id": "w21-mon-lift",
               "sport": "strength",
               "type": "strength",
@@ -4011,15 +4155,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w21-tue",
-              "sport": "run",
-              "type": "intervals",
-              "name": "Cruise Intervals - 3 x 1mi @ Threshold",
-              "description": "Maintain threshold sharpness",
-              "durationMinutes": 55,
-              "distanceMiles": 6,
-              "primaryZone": "Z5a / 8:00/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3 x 1mi @ 8:00/mi\n  - 90s jog recovery\nCOOL DOWN: 1mi easy\n\nReps should feel CONTROLLED - the goal is feel, not fitness building",
+              "id": "w21-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -4033,7 +4174,7 @@ ${a.join(`
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Recovery",
+              "description": "Easy Run",
               "durationMinutes": 40,
               "distanceMiles": 4,
               "primaryZone": "Z2",
@@ -4058,15 +4199,15 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w21-thu",
+              "id": "w21-thu-run",
               "sport": "run",
               "type": "tempo",
-              "name": "MP Touch - 3mi @ MP",
-              "description": "Race-pace feel",
+              "name": "TEMPO: 3mi @ MP Touch",
+              "description": "TEMPO: 3mi @ MP Touch",
               "durationMinutes": 55,
               "distanceMiles": 6,
               "primaryZone": "Z3 / 8:35/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi @ 8:35/mi (MP)\n  - Should feel CRISP and EASY\nCOOL DOWN: 1.5mi easy",
+              "humanReadable": "Race-pace feel\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3mi @ 8:35/mi (MP)\n  - Should feel CRISP and EASY\nCOOL DOWN: 1.5mi easy",
               "completed": false
             },
             {
@@ -4102,11 +4243,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w21-sat",
+              "id": "w21-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run - 14 miles",
-              "description": "Reduced long run - taper continues",
+              "description": "Long Run - 14 miles",
               "durationMinutes": 140,
               "distanceMiles": 14,
               "primaryZone": "Z2",
@@ -4119,15 +4260,6 @@ ${a.join(`
           "date": "2026-09-27",
           "dayOfWeek": "Sunday",
           "workouts": [
-            {
-              "id": "w21-sun",
-              "sport": "rest",
-              "type": "rest",
-              "name": "Rest",
-              "description": "Recovery",
-              "humanReadable": "Full rest. Start carb-loading priorities for next weekend.",
-              "completed": false
-            },
             {
               "id": "w21-sun-lift",
               "sport": "strength",
@@ -4147,13 +4279,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 4,
-            "hours": 4.7,
+            "hours": 4.8,
             "miles": 30
           },
           "strength": {
             "sessions": 4,
-            "hours": 3.0,
-            "notes": "4 lifts/wk in light phase"
+            "hours": 3.0
           }
         }
       }
@@ -4172,12 +4303,15 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w22-mon",
-              "sport": "rest",
-              "type": "rest",
-              "name": "Rest Day",
-              "description": "Race week begins",
-              "humanReadable": "Rest. Begin emphasizing sleep (8+ hours). Hydrate generously.",
+              "id": "w22-mon-run",
+              "sport": "run",
+              "type": "tempo",
+              "name": "Race-Pace Touch: 2 x 1mi @ MP",
+              "description": "Race-Pace Touch: 2 x 1mi @ MP",
+              "durationMinutes": 45,
+              "distanceMiles": 5,
+              "primaryZone": "Z3 / 8:35/mi",
+              "humanReadable": "Sharpening, no fatigue\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 2 x 1mi @ 8:35/mi (MP)\n  - 2:00 jog recovery\nCOOL DOWN: 1.5mi easy\n\nShould feel EFFORTLESS. That's what we want.",
               "completed": false
             }
           ]
@@ -4187,15 +4321,12 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w22-tue",
-              "sport": "run",
-              "type": "tempo",
-              "name": "Race-Pace Touch - 2 x 1mi @ MP",
-              "description": "Sharpening, no fatigue",
-              "durationMinutes": 45,
-              "distanceMiles": 5,
-              "primaryZone": "Z3 / 8:35/mi",
-              "humanReadable": "WARM UP: 1.5mi easy + 4x20s strides\nMAIN: 2 x 1mi @ 8:35/mi (MP)\n  - 2:00 jog recovery\nCOOL DOWN: 1.5mi easy\n\nShould feel EFFORTLESS. That's what we want.",
+              "id": "w22-tue-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest or Light Climb",
+              "description": "Tuesday is your true recovery day. Optional easy climbing only.",
+              "humanReadable": "REST DAY - or optional easy/technical climbing session (60 min, low intensity).\n\nThis is your hardest recovery day of the week (between Mon speed and Thu tempo). Use it wisely:\n- Sleep in if possible\n- If climbing: technical practice, easy slabs, ARC training (NOT projects or limit bouldering)\n- Mobility work, foam rolling, hip 90/90s are great\n- DO NOT add a run, even an easy one - your legs need this day",
               "completed": false
             }
           ]
@@ -4205,11 +4336,11 @@ ${a.join(`
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w22-wed",
+              "id": "w22-wed-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
-              "description": "Short and easy",
+              "description": "Easy Run",
               "durationMinutes": 30,
               "distanceMiles": 3,
               "primaryZone": "Z2",
@@ -4223,11 +4354,11 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w22-thu",
+              "id": "w22-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Shake-out + Strides",
-              "description": "Light leg turnover",
+              "description": "Shake-out + Strides",
               "durationMinutes": 25,
               "distanceMiles": 2.5,
               "primaryZone": "Z2",
@@ -4241,11 +4372,11 @@ ${a.join(`
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w22-fri",
+              "id": "w22-fri-run",
               "sport": "run",
               "type": "easy",
-              "name": "Pre-Race Shake-out 20min",
-              "description": "Loose legs, mentally prepare",
+              "name": "Pre-Race Shake-out",
+              "description": "Pre-Race Shake-out",
               "durationMinutes": 20,
               "distanceMiles": 2,
               "primaryZone": "Z1-2",
@@ -4259,11 +4390,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w22-sat-race",
+              "id": "w22-sat-run",
               "sport": "run",
               "type": "race",
               "name": "\ud83c\udfc1 ST. GEORGE MARATHON \ud83c\udfc1",
-              "description": "A-RACE - Goal: sub-3:45 (8:35/mi)",
+              "description": "\ud83c\udfc1 ST. GEORGE MARATHON \ud83c\udfc1",
               "durationMinutes": 225,
               "distanceMiles": 26.2,
               "primaryZone": "Z3 / 8:35/mi avg",
@@ -4277,12 +4408,12 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w22-sun",
+              "id": "w22-sun-rest",
               "sport": "rest",
               "type": "rest",
-              "name": "Recovery - Walk + Eat + Celebrate",
-              "description": "You earned it",
-              "humanReadable": "Walk 20-30min easy. Eat anything you want. Celebrate. Reflect on the journey.\n\n5 months of training, two race finishes. Well done.",
+              "name": "Rest Day",
+              "description": "Full rest",
+              "humanReadable": "Full rest",
               "completed": false
             }
           ]
@@ -4293,13 +4424,12 @@ ${a.join(`
         "bySport": {
           "run": {
             "sessions": 5,
-            "hours": 5.7,
+            "hours": 5.8,
             "miles": 38.7
           },
           "strength": {
             "sessions": 0,
-            "hours": 0.0,
-            "notes": "Race week - mobility only"
+            "hours": 0.0
           }
         }
       }
@@ -4366,13 +4496,13 @@ ${a.join(`
   "strengthProgram": {
     "philosophy": "Climbing-first, running-injury-prevention second, aesthetic muscle is not a goal. Pulling-dominant for climbing performance, posterior chain + eccentric quad for running and St. George downhill, antagonist work to keep shoulders/elbows healthy under climbing volume.",
     "weeklyStructure": {
-      "Mon": "Lift B - Upper Pull (climbing-focused)",
-      "Tue": "AM Quality Run only (no lift)",
-      "Wed": "AM Easy Run + PM Lift A - Lower Heavy",
-      "Thu": "AM Easy/Med Run + PM Lift C - Upper Push + Core",
-      "Fri": "Climb or rest (no lift)",
-      "Sat": "AM Long Run only (no lift)",
-      "Sun": "AM Climb + PM Lift D - Lower Power/Foot (light)"
+      "Mon": "AM SPEED Run + PM Lift B (Upper Pull - climbing focus)",
+      "Tue": "Rest or light climb (true recovery day)",
+      "Wed": "AM Easy Run + PM Lift A (Lower Heavy - posterior chain)",
+      "Thu": "AM TEMPO Run + PM Lift C (Upper Push + Core)",
+      "Fri": "Rest or climb",
+      "Sat": "AM LONG Run (no lift)",
+      "Sun": "AM Climb (moderate) + PM Lift D (Lower Power - light)"
     },
     "intensityProgression": {
       "foundation_W1-3": "3x8-12, RPE 6-7 (form first)",
@@ -4390,6 +4520,13 @@ ${a.join(`
       "If something has to give, drop Lift D (Sun) first, then Lift C (Thu)",
       "Always do strength AFTER running on the same day, separated by 4-6 hours minimum",
       "Skip all lifting in the 5 days before a race (W10 from Tue, W22 from Tue)"
+    ],
+    "scheduleNotes": [
+      "Mon speed run + Mon PM upper pull lift = climbing-focused upper work on your hardest leg day",
+      "Tue is a TRUE recovery day - rest or technical/easy climbing only",
+      "Wed Lower Heavy lift comes before Thu Tempo - legs will feel mildly tired Thu morning. This is by design and adapts within 2-3 weeks. If Thu tempos feel impossible to hit, swap Lift A to Tue PM.",
+      "Thu Tempo + Sat Long Run = 1 day rest (Fri). Honor the Fri rest day - no leg lifting Friday.",
+      "Sun light lower power lift is 48 hours before Mon speed - plenty of recovery"
     ]
   }
 }
