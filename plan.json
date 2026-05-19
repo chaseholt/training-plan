@@ -11,7 +11,7 @@
     "updatedAt": "2026-04-30T14:00:00Z",
     "totalWeeks": 22,
     "generatedBy": "Claude Coach",
-    "scheduleNote": "Mon/Wed/Thu/Sat run schedule (Mon=Speed, Wed=Easy, Thu=Tempo, Sat=Long)"
+    "scheduleNote": "Mon/Wed/Thu/Sat run schedule | Field test rescheduled to W5 Mon (Jun 1) due to illness"
   },
   "preferences": {
     "swim": "yards",
@@ -889,7 +889,7 @@
       "startDate": "2026-05-25",
       "endDate": "2026-05-31",
       "phase": "Re-Base",
-      "focus": "Recovery week - reduce volume 25%, then push hard in Half Build",
+      "focus": "Recovery week - keep purely easy. Field test moved to next Mon (W5) to allow full illness recovery.",
       "targetHours": 2.5,
       "isRecoveryWeek": true,
       "days": [
@@ -1077,7 +1077,7 @@
       "startDate": "2026-06-01",
       "endDate": "2026-06-07",
       "phase": "Half Marathon Build",
-      "focus": "First quality session - cruise intervals; long run climbs to 10mi",
+      "focus": "FIELD TEST WEEK - retest threshold on Monday to set zones for the build phase",
       "targetHours": 3.7,
       "isRecoveryWeek": false,
       "days": [
@@ -1088,13 +1088,13 @@
             {
               "id": "w5-mon-run",
               "sport": "run",
-              "type": "intervals",
-              "name": "SPEED: 3 x 1mi @ Threshold",
-              "description": "SPEED: 3 x 1mi @ Threshold",
-              "durationMinutes": 50,
-              "distanceMiles": 5.5,
-              "primaryZone": "Z5a / 8:00-8:15/mi",
-              "humanReadable": "FIRST QUALITY SESSION - threshold work\n\nWARM UP: 1.5mi easy + 4x20s strides\nMAIN: 3 x 1mi @ 8:00-8:15/mi (threshold pace, HR ~175)\n  - 2:00 jog recovery between\nCOOL DOWN: 1mi easy\n\nFeel: \"comfortably hard\" - you could speak only a few words",
+              "type": "test",
+              "name": "30-min Threshold Field Test (RETEST)",
+              "description": "Calibrate zones - 7 days post-illness recovery + 1 week of base building",
+              "durationMinutes": 60,
+              "distanceMiles": 6,
+              "primaryZone": "Z4-5a",
+              "humanReadable": "FIELD TEST - retesting after illness recovery\n\nWARM UP: 15min easy + 4x20s strides\nMAIN: Run 30min ALL-OUT sustainable pace (race effort - imagine you'd be racing for 60min)\n  - Find a flat, uninterrupted route\n  - Pace it like you'd race a 60-min event - don't blow up in the first 5min\n  - GO HARDER than last time. The first test was during illness recovery.\n  - Target: Avg HR climbing toward 175-178 by end, max HR 180+ on final minutes\nCOOL DOWN: 10min easy\n\nRecord:\n  - Avg HR over the 30 min = your LTHR\n  - Avg pace over the 30 min = your threshold pace\n\nReport the result and I'll update zones + W6+ paces.\n\nIf you feel any lingering illness or your HR is again capped (max < 180), STOP and we'll use the data plus the May 18 effort to estimate zones conservatively.",
               "completed": false
             },
             {
